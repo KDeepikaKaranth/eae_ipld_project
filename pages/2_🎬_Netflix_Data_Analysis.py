@@ -58,7 +58,7 @@ movies_list = []
 movies_df["country"] = movies_df["country"].fillna("Unknown")
 movies_df_str = "," .join(movies_df["country"])
 movies_df_list = movies_df_str.split(",")
-movies_df_list 
+ 
 for x in movies_df_list:
     j = x.lstrip()
     movies_list.append(j)
@@ -104,7 +104,6 @@ year = cols2[0].number_input("Select a year:", min_year, max_year, 2005)
 
 # TODO: Ex 2.6: For a given year, get the Pandas Series of how many movies and series 
 # combined were made by every country, limit it to the top 10 countries.
-year = 2005
 top_10_countries = movies_df.loc[movies_df["release_year"].isin([year])].value_counts(movies_df["country"]).head(10)
 
 # print(top_10_countries)
