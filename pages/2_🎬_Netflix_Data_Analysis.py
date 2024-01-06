@@ -53,14 +53,32 @@ max_year = movies_df["release_year"].max()
 num_missing_directors = movies_df ['director'].isna( ).sum( )
 
 # TODO: Ex 2.4: How many different countries are there in the data?
-movies_df ['country'] = movies_df ['country'].fillna("Unknown")
-movies_df ['country'] = movies_df ['country'].apply(lambda this : ", ".join(this) if isinstance(this , list) else this)
-movies_df ['country'] = movies_df ['country'].str.split(", ")
-moviesCountry = movies_df.explode('country')
-n_countries = country = moviesCountry ['country'].nunique( )
+unique_list = []
+movies_list = []
+movies_df["country"] = movies_df["country"].fillna("Unknown")
+movies_df_str = "," .join(movies_df["country"])
+movies_df_list = movies_df_str.split(",")
+movies_df_list 
+for x in movies_df_list:
+    j = x.lstrip()
+    movies_list.append(j)
+for i in movies_list:
+    if i not in unique_list:
+        unique_list.append(i)
+
+n_countries = unique_list.__len__()
 
 # TODO: Ex 2.5: How many characters long are on average the title names?
-avg_title_length = (movies_df ['title'].apply(lambda x : len(x))).mean( )
+movie_list_len = {}
+for i in movies_df["title"]:
+   movie_list_len[i] = len(i)
+
+def applyMovieList(any):
+   return movie_list_len.get(any)
+
+movies_df["length"] = movies_df["title"].apply(applyMovieList)
+
+avg_title_length = movies_df["length"].mean()
 
 
 # ----- Displaying the extracted information metrics -----
@@ -87,9 +105,7 @@ year = cols2[0].number_input("Select a year:", min_year, max_year, 2005)
 # TODO: Ex 2.6: For a given year, get the Pandas Series of how many movies and series 
 # combined were made by every country, limit it to the top 10 countries.
 year = 2005
-mydataCountry = (movies_df.loc [movies_df ['release_year'] == year])
-country = mydataCountry ['country'].value_counts( )
-top_10_countries = country.head(10)
+top_10_countries = movies_df.loc[movies_df["release_year"].isin([year])].value_counts(movies_df["country"]).head(10)
 
 # print(top_10_countries)
 if top_10_countries is not None:
