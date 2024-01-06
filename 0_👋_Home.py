@@ -55,7 +55,7 @@ st.write("""
 
 - 🛩️ prev: Have IT experience, Bachelors of Engineering
 
-- ❤️ Your travel the world, taste different food and learn flute
+- ❤️ Travel the world, taste different food and learn flute
 
 - 🤖 None yet
 
