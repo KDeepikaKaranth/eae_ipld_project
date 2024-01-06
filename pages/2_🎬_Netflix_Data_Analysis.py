@@ -46,7 +46,7 @@ with st.expander("Check the complete dataset:"):
 # ----- Extracting some basic information from the dataset -----
 
 # TODO: Ex 2.2: What is the min and max release years?
-min_year = movies_df["release_year"].min()
+min_year = movies_df["release_year"].min()  
 max_year = movies_df["release_year"].max()
 
 # TODO: Ex 2.3: How many director names are missing values (NaN)?
