@@ -4,7 +4,7 @@ import base64
     
 # ----- Page configs (tab title, favicon) -----
 st.set_page_config(
-    page_title="<Your Name> Portfolio",
+    page_title="<Kalanja Deepika Karanth> Portfolio",
     page_icon="📊",
 )
 
@@ -24,7 +24,7 @@ st.write(f"""<div style="text-align: center;"><h1 style="text-align: center;">�
 
 
 # ----- Profile image file -----
-profile_image_file_path = "profile_image.png"       # TODO: Upload your profile image to the same folder as this script and update this if it has a different name
+profile_image_file_path = "Deepika.jpeg"       # TODO: Upload your profile image to the same folder as this script and update this if it has a different name
 
 with open(profile_image_file_path, "rb") as img_file:
     img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
@@ -51,17 +51,19 @@ st.subheader("About Me")
 
 # TODO: Modify and adapt the following lines to your info, you can add or remove some details if you want
 st.write("""
-- 🧑‍💻 I am a <Current Role and/or Studies> 
+- 🧑‍💻 I am a <Student in EAE Business School studying Masters in Big Data and Analytics> 
 
-- 🛩️ prev: <Previous Experience, Background or Studies>
+- 🛩️ prev: <Have IT experience, Bachelors of Engineering>
 
-- ❤️ <Your Passion and/or Interests>
+- ❤️ <Your travel the world, taste different food and learn flute>
 
-- 🤖 <Your Personal Projects>
+- 🤖 <None yet>
 
-- 🏂 <Your Hobbies>
+- 🏂 <Flute>
 
-- 📫 How to reach me: <Your Email>
+- 📫 How to reach me: <kdeepikaranth@gmail.com>
+        
+- LinkedIn : <https://www.linkedin.com/in/deepika-karanth-2a369985>
 
 - 🏠 Barcelona
 """)
