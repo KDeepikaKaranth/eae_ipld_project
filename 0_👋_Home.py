@@ -20,7 +20,7 @@ with st.sidebar:
 
 
 # ----- Top title -----
-st.write(f"""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is ????</h1></div>""", unsafe_allow_html=True)  # TODO: Add your name
+st.write(f"""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is Kalanja Deepika Karanth</h1></div>""", unsafe_allow_html=True)  # TODO: Add your name
 
 
 # ----- Profile image file -----
@@ -39,7 +39,7 @@ st.write(f"""
 
 
 # ----- Personal title or short description -----
-current_role = "Current Role and/or Studies or Description"   # TODO: Change this
+current_role = "Master Student in EAE Business School, Barcelona"   # TODO: Change this
 
 st.write(f"""<div style="text-align: center;"><h4><i>{current_role}</i></h4></div>""", unsafe_allow_html=True)
 
@@ -51,19 +51,19 @@ st.subheader("About Me")
 
 # TODO: Modify and adapt the following lines to your info, you can add or remove some details if you want
 st.write("""
-- 🧑‍💻 I am a <Student in EAE Business School studying Masters in Big Data and Analytics> 
+- 🧑‍💻 I am a Student in EAE Business School studying Masters in Big Data and Analytics 
 
-- 🛩️ prev: <Have IT experience, Bachelors of Engineering>
+- 🛩️ prev: Have IT experience, Bachelors of Engineering
 
-- ❤️ <Your travel the world, taste different food and learn flute>
+- ❤️ Your travel the world, taste different food and learn flute
 
-- 🤖 <None yet>
+- 🤖 None yet
 
-- 🏂 <Flute>
+- 🏂 Flute
 
-- 📫 How to reach me: <kdeepikaranth@gmail.com>
+- 📫 How to reach me: kdeepikaranth@gmail.com
         
-- LinkedIn : <https://www.linkedin.com/in/deepika-karanth-2a369985>
+- LinkedIn : https://www.linkedin.com/in/deepika-karanth-2a369985
 
 - 🏠 Barcelona
 """)
